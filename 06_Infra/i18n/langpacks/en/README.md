@@ -139,32 +139,6 @@ This repo ships with a small set of **sanitized examples** (people card / projec
 
 ---
 
-## How to publish
-
-If this template lives inside a larger private repo, and you want **zero Git history** (e.g. the parent repo contains sensitive history), do a clean export (single commit):
-
-```bash
-# 1) Copy into a new directory (without .git)
-rsync -a --exclude '.git' --exclude '.memo_examples_archive' MEMO/public/repo/ /path/to/memo-public-repo/
-
-# 2) Init and push to GitHub (public)
-cd /path/to/memo-public-repo
-git init -b main
-git add -A
-git commit -m "Initial public template"
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
-
-If you are sure the history of `MEMO/public/repo/` itself is safe to publish, you can publish it via `git subtree`:
-
-```bash
-git subtree split --prefix MEMO/public/repo -b memo-public
-git push <your-remote> memo-public:main
-```
-
----
-
 ## License
 
 MIT

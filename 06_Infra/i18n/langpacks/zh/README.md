@@ -235,33 +235,6 @@ MEMO **明确不做**：
 
 ---
 
-## 如何发布
-
-- 如果你把本仓库作为一个独立 repo 使用：直接 push 到你的 GitHub 即可（推荐先清理示例与检查隐私）。
-- 如果此模板位于你的私有仓库内部，但你希望 **不携带任何历史**（例如主仓库历史里可能有敏感信息）：建议做一次“干净导出”（新仓库单提交）：
-
-```bash
-# 1) 复制到一个新目录（不带 .git）
-rsync -a --exclude '.git' --exclude '.memo_examples_archive' MEMO/public/repo/ /path/to/memo-public-repo/
-
-# 2) 在新目录初始化并推到 GitHub（public）
-cd /path/to/memo-public-repo
-git init -b main
-git add -A
-git commit -m "Initial public template"
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
-
-- 如果你确认 `MEMO/public/repo/` 的历史本身是干净可公开的，也可以通过 `git subtree` 单独发布：
-
-```bash
-git subtree split --prefix MEMO/public/repo -b memo-public
-git push <your-remote> memo-public:main
-```
-
----
-
 ## License
 
 MIT

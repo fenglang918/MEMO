@@ -12,17 +12,17 @@ Currently studying how to use **Agents** to synthesize data, improve LLM perform
 
 ## Education
 
-### University A
-**PhD Student** in Artificial Intelligence · 20XX–  
-Advisor: Prof. A
+### The Hong Kong University of Science and Technology (Guangzhou)
+**PhD Student** in Artificial Intelligence · Fall 2026  
+Advisor: Prof. Linfeng Zhang
 
-### University B
-Master · 20XX–20XX  
-Scholarship / Fellowship (optional)
+### Fudan University
+Master of Finance (FinTech) · 2024–2026  
+Entrance Scholarship
 
-### University C
-Bachelor · 20XX–20XX  
-Major: X + Y (optional)
+### UESTC
+Dual-degree "Internet+" Elite Program · 2020–2024  
+Finance + Data Science. National Scholarship
 
 ---
 
@@ -30,20 +30,24 @@ Major: X + Y (optional)
 
 | Period | Organization | Role |
 |--------|--------------|------|
-| 20XX.XX–Present | Org A | Research / Engineering |
-| 20XX.XX–20XX.XX | Org B | Intern |
+| 2025.11–Present | Alibaba × SJTU | Academic Collaboration (Agent & Benchmark) |
+| 2025.03–Present | EPIC Lab (SJTU) | Research Assistant |
+| 2024.06–2024.08 | ByteDance | Scientific Computing Intern |
 
 ---
 
 ## Publications
 
-- Paper A: Title · Venue/Status (optional) · Role (optional)
-- Paper B: Title · Venue/Status (optional) · Role (optional)
+- **HiCache**: Plug-in Scaled-Hermite Upgrade for Cache-then-Forecast Diffusion Acceleration  
+  *Under review at ICLR 2026* (Co-first Author, 1st)
+
+- **Forecast then Calibrate**: Feature Caching as ODE for Efficient Diffusion Transformers  
+  *AAAI 2026* (Co-first Author, 2nd)
 
 ---
 
 ## Contact
 
-- Email: you@example.com
-- GitHub: https://github.com/<your-handle>
-- Website: https://<your-domain>
+- Email: fenglang918@foxmail.com
+- GitHub: [fenglang918](https://github.com/fenglang918)
+- Website: [fenglang918.github.io](https://fenglang918.github.io)

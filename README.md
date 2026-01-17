@@ -6,6 +6,8 @@ An AI-native personal operating system protocol.
 
 让转瞬即逝的记忆成为实体。
 
+仓库：https://github.com/fenglang918/MEMO
+
 > **我们选择记录什么，说明我们珍惜什么。**
 > *What we choose to record reveals what we choose to value.*
 

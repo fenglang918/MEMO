@@ -6,6 +6,8 @@ An AI-native personal operating system protocol.
 
 Turn ephemeral memories into durable objects.
 
+Repo: https://github.com/fenglang918/MEMO
+
 > **What we choose to record reveals what we choose to value.**
 
 ---

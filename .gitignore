@@ -1,0 +1,20 @@
+# Common secrets / 常见敏感文件
+.env
+*.key
+*.pem
+*.p12
+*.pfx
+__pycache__/
+*.pyc
+.memo_lang
+.memo_lang_backup/
+.memo_cleanup_backup/
+.memo_examples_archive/
+
+# Suggested private area / 建议的私密区
+private/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/

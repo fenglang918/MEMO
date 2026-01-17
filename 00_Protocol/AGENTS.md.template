@@ -1,0 +1,47 @@
+# For Codex/Cursor/Claude（MEMO）
+
+你正在一个 **MEMO 仓库** 里工作：一个 AI-native 的个人记忆/经验协议与数据系统。
+
+## 使用方式（推荐）
+
+- 推荐用 Code Agent 的 `/init` 生成本仓库的 `AGENTS.md`（并按你的使用习惯微调）。
+- 这份模板文件用于给 `/init` 或你自己复制改写：`00_Protocol/AGENTS.md.template`。
+
+## 核心哲学（必须遵守）
+
+- **MEMO 是协议**：目录与文件名首先表达“要记录什么（Objects）”，而不是“怎么实现/给谁用”。
+- **Protocol First**：`00_Protocol/` 只定义对象与规则（schemas/约束/术语/使用说明），避免塞入执行逻辑。
+- **Infra 承载可执行**：Agent 技能、脚本、一键工具放在 `06_Infra/`（例如 `06_Infra/skills/`）。
+- **Storage 与 Intelligence 解耦**：仓库是数据与协议；AI/Agent 是可替换的“CPU”。
+
+## 目录约定（当前结构）
+
+- `00_Protocol/`：协议层（schemas、术语、使用说明、隐私基线）
+- `01_Inbox/`：短暂碎片入口
+- `02_Desires/`：上游驱动（偏好/价值观/愿望）
+- `03_Goal-Projects/`：目标与项目（TPCD）
+- `04_Assets/`：存量资产（ME）
+- `05_Resources/`：可调用资源（MO）
+- `06_Infra/`：基础设施（Agent skills、脚本、一键工具）
+
+## “skills” 的两种含义（避免混淆）
+
+- `04_Assets/skills/`：你的技能画像（个人资产的一部分，内容是“你有什么能力”）
+- `06_Infra/skills/`：Agent 技能（可执行指令/脚本，内容是“Agent 怎么操作这个仓库”）
+
+## 安全底线（无论仓库是否公开）
+
+- 不要写入可直接滥用的 **明文机密**：账号密码、私钥、API keys、tokens 等（用占位符/环境变量/私密渠道）。
+- 若你明确要“公开发布/开源/同步到公网”，再额外执行脱敏：手机号、住址、私密人际细节、未公开身份信息等一律不写。
+
+## 变更策略（避免破坏稳定性）
+
+- 结构调整优先用 `git mv`，保证历史与链接可追踪。
+- 不要做无意义的大范围格式化；保持 diff 最小化、可回滚。
+- 若发现“文档描述”与“当前结构”不一致：以当前结构为准，并更新文档使其一致。
+
+## 常用自检
+
+- 查残留旧路径引用：`rg -n "\\b(protocol|inbox|desires|goal-projects|assets|resources|cli)/" -S .`
+- 检查 Network CLI：`python3 -m py_compile 05_Resources/network/_cli/network.py 05_Resources/network/_cli/validate_people.py`
+

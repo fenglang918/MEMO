@@ -1,0 +1,444 @@
+:root {
+  --bg-1: #f6efe5;
+  --bg-2: #d8e5df;
+  --card: #fffefb;
+  --ink: #1a2220;
+  --text: #1a2220;
+  --muted: #5e6a65;
+  --line: #d4d0c3;
+  --brand: #0f766e;
+  --accent: #b45309;
+  --accent-2: #16a34a;
+  --warn: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", "PingFang SC", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(920px 520px at -10% -20%, #efe2cb 0%, transparent 70%),
+    radial-gradient(920px 520px at 110% -30%, #cfe7de 0%, transparent 72%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.topbar,
+.toolbar,
+.legend,
+.status,
+.month-summary {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 16px 32px rgba(15, 34, 32, 0.08);
+}
+
+h1, h2 {
+  margin: 0 0 6px 0;
+  color: var(--ink);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toolbar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-btn.active {
+  border-color: var(--brand);
+  background: #e8f3f0;
+  font-weight: 600;
+}
+
+button, input {
+  border: 1px solid var(--line);
+  background: #fffdf7;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+button:hover {
+  border-color: var(--brand);
+  cursor: pointer;
+}
+
+#rangeLabel {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.legend .item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend .done { background: var(--accent-2); }
+.legend .todo { background: var(--warn); }
+.legend .month-only { background: #c4b5fd; }
+
+.done { background: var(--accent-2); }
+.todo { background: var(--warn); }
+.month-only { background: #c4b5fd; }
+
+.calendar-wrap {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 14px;
+}
+
+.calendar-frame {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card);
+  padding: 8px;
+}
+
+#toastCalendar {
+  width: 100%;
+  height: 72vh;
+  min-height: 640px;
+  max-height: 860px;
+}
+
+.month-summary ul {
+  padding-left: 18px;
+  margin: 8px 0 0;
+}
+
+.month-summary li {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.summary-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.summary-dot.done { background: var(--accent-2); }
+.summary-dot.todo { background: var(--warn); }
+.summary-dot.month-only { background: #c4b5fd; }
+
+.summary-tag {
+  display: inline-block;
+  border: 1px solid #c4b5fd;
+  border-radius: 999px;
+  padding: 0 6px;
+  font-size: 11px;
+  color: #5b4b8a;
+  margin: 0 6px 0 4px;
+}
+
+.month-summary a {
+  color: var(--brand);
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.month-summary a:hover {
+  text-decoration: underline;
+}
+
+.popup-tags {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.popup-tags-inline {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.status strong {
+  color: var(--ink);
+}
+
+.calendar-links a {
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(15,118,110,0.35);
+  padding-bottom: 1px;
+}
+
+.calendar-links a:hover {
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 980px) {
+  .calendar-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  #rangeLabel {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #toastCalendar {
+    height: 66vh;
+    min-height: 520px;
+    max-height: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .toolbar {
+    gap: 6px;
+  }
+
+  button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .legend {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .topbar,
+  .toolbar,
+  .legend,
+  .status,
+  .month-summary {
+    padding: 8px 8px;
+  }
+
+  .calendar-links {
+    font-size: 11px;
+  }
+
+  .page {
+    gap: 6px;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+  }
+
+  .calendar-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-frame {
+    flex: 1 1 auto;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .topbar,
+  .legend,
+  .status,
+  .month-summary {
+    display: none;
+  }
+
+  .toolbar {
+    border-radius: 0;
+    box-shadow: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+
+  .status {
+    display: none;
+  }
+
+  .month-summary {
+    display: none;
+  }
+
+  #toastCalendar {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    min-width: 720px;
+  }
+
+  .toastui-calendar-day-name__date {
+    font-size: 16px;
+  }
+
+  .toastui-calendar-day-name__name {
+    font-size: 9px;
+  }
+
+  .toastui-calendar-day-names.toastui-calendar-week,
+  .toastui-calendar-day-names.toastui-calendar-month {
+    height: 28px;
+  }
+
+  .toastui-calendar-day-name-item.toastui-calendar-week,
+  .toastui-calendar-day-name-item.toastui-calendar-month {
+    height: 28px;
+    line-height: 26px;
+  }
+
+  .toastui-calendar-grid-cell-date {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 10px;
+  }
+
+  .toastui-calendar-weekday-event-title {
+    font-size: 9px;
+    line-height: 1.2;
+    padding-left: 2px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .toastui-calendar-weekday-event-title .event-tags {
+    margin-left: 4px;
+    font-size: 8px;
+    opacity: 0.7;
+  }
+
+  .toastui-calendar-weekday-event {
+    height: 14px;
+  }
+
+  .toastui-calendar-weekday-event-block {
+    height: 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  .toastui-calendar-weekday-exceed-in-week {
+    font-size: 9px;
+  }
+
+  .toastui-calendar-grid-cell-more-events {
+    font-size: 9px;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 12px;
+  }
+
+  .toolbar,
+  .legend,
+  .calendar-wrap {
+    flex-direction: column;
+  }
+
+  .calendar-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  #monthLabel {
+    min-width: auto;
+    display: inline-block;
+  }
+
+  .calendar-day {
+    min-height: 110px;
+  }
+}

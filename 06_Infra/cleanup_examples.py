@@ -13,10 +13,23 @@ ARCHIVE_DIRNAME = ".memo_examples_archive"
 
 EXAMPLE_PATHS = (
     Path("05_Resources/network/people/momo.md"),
-    Path("03_Goal-Projects/active/2026-01-MEMO-开源模板发布"),
-    Path("03_Goal-Projects/active/2026-01-读博-vs-直接工作"),
-    Path("06_Infra/i18n/langpacks/zh/03_Goal-Projects/active/2026-01-MEMO-开源模板发布"),
-    Path("06_Infra/i18n/langpacks/en/03_Goal-Projects/active/2026-01-MEMO-开源模板发布"),
+    Path("03_Goal-Projects/2026/01/MEMO-开源模板发布"),
+    Path("03_Goal-Projects/2026/01/phd-vs-job"),
+    Path("07_Principles/000-time-value-and-autonomy.md"),
+    Path("07_Principles/002-certainty-vs-probability-budget.md"),
+    Path("07_Principles/003-reading-materials-as-resources.md"),
+    Path("07_Principles/004-project-first-knowledge-accumulation.md"),
+    Path("08_Operations/00_Master-Schedule/calendar.md"),
+    Path("08_Operations/00_Master-Schedule/milestones.md"),
+    Path("08_Operations/00_Master-Schedule/weekly.md"),
+    Path("08_Operations/00_Master-Schedule/inbox.md"),
+    Path("08_Operations/00_Master-Schedule/auto-timeline.md"),
+    Path("08_Operations/00_Master-Schedule/calendar-page-data.js"),
+    Path("08_Operations/00_Master-Schedule/decision-principles-time-value-and-autonomy.md"),
+    Path("08_Operations/01_Time-Tracking/time_entries.csv"),
+    Path("08_Operations/01_Time-Tracking/reports/latest.md"),
+    Path("06_Infra/i18n/langpacks/zh/03_Goal-Projects/2026/01/MEMO-开源模板发布"),
+    Path("06_Infra/i18n/langpacks/en/03_Goal-Projects/2026/01/MEMO-开源模板发布"),
     # Profile examples
     Path("04_Assets/profile/Me.example.md"),
     Path("04_Assets/profile/README.example.md"),
@@ -37,8 +50,9 @@ EXAMPLE_PATHS = (
 )
 
 DOC_PATHS = (
-    Path("03_Goal-Projects/active/README.md"),
     Path("03_Goal-Projects/README.md"),
+    Path("07_Principles/README.md"),
+    Path("08_Operations/README.md"),
     Path("06_Infra/i18n/README.md"),
     # Remove example references when examples are archived/deleted
     Path("04_Assets/profile/README.md"),
@@ -77,12 +91,36 @@ def _remove_demo_references(text: str) -> str:
             continue
         if "2026-01-读博-vs-直接工作" in line:
             continue
+        if "2026-01-phd-vs-job" in line:
+            continue
+        if "000-time-value-and-autonomy.md" in line:
+            continue
+        if "002-certainty-vs-probability-budget.md" in line:
+            continue
+        if "003-reading-materials-as-resources.md" in line:
+            continue
+        if "004-project-first-knowledge-accumulation.md" in line:
+            continue
+        if "00_Master-Schedule/calendar.md" in line:
+            continue
+        if "00_Master-Schedule/milestones.md" in line:
+            continue
+        if "00_Master-Schedule/inbox.md" in line:
+            continue
+        if "00_Master-Schedule/auto-timeline.md" in line:
+            continue
+        if "01_Time-Tracking/time_entries.csv" in line:
+            continue
+        if "01_Time-Tracking/reports/latest.md" in line:
+            continue
         if "本模板额外提供" in line:
+            continue
+        if "这些示例会被清理" in line:
             continue
         if "脱敏示例项目" in line and "TPCD" in line:
             continue
-        if "（见 `03_Goal-Projects/active/2026-01-MEMO-开源模板发布/`）" in line:
-            line = line.replace("（见 `03_Goal-Projects/active/2026-01-MEMO-开源模板发布/`）。", "。")
+        if "（见 `03_Goal-Projects/2026/01/MEMO-开源模板发布/`）" in line:
+            line = line.replace("（见 `03_Goal-Projects/2026/01/MEMO-开源模板发布/`）。", "。")
         if ".example.md" in line and "参考" in line:
             continue
         if ".example.md" in line and "本模板" in line:

@@ -1,58 +1,56 @@
 # Me / 个人基础数据（Example）
 
 > 说明：本文件是公开模板里的示例 Profile，用于演示 `Me.md` 的写法与字段口径。
-> 公开模板中的敏感字段默认使用打码/占位符。
+> 公开模板中的示例内容默认使用泛化身份与占位式信息，不对应真实个人。
 
 ## Basic Info / 基本信息
 
-- name: Liang Feng / 冯亮
-- email: fenglang918@foxmail.com
+- name: Example Researcher / 示例用户
+- email: example@domain.test
 - links:
-  - github: https://github.com/fenglang918
-  - website: https://fenglang918.github.io
-  - rednote: https://www.xiaohongshu.com/user/profile/6120ecdb00000000010020ba
+  - github: https://github.com/example-user
+  - website: https://example.com
+  - notes: https://example.com/notes
 
 ## Private Fields (Masked in Public Template) / 私密字段（公开版打码）
 
-- birth_date: 1999-01-01 (masked)
+- birth_date: 199x-xx-xx (masked)
 - height_cm: 1xx
 - weight_kg: xx
 
 ## Stage / 阶段信息（供 Agent 做相对推断）
 
-- stage_anchor: 2026-09（Incoming PhD / 博士起始锚点）
-- expected_graduation: 2026-06-30（Master / 硕士预计毕业）
-- current_stage: Master → PhD transition
+- stage_anchor: 2026-09（Research track start / 研究阶段起始锚点）
+- expected_graduation: 2028-06-30（Expected graduation / 预计毕业）
+- current_stage: Research-oriented graduate student
 
 ## Research / 研究
 
-- long_term_interest: how can intelligence grow and scale, while remaining precisely calibrated to the complexity of the real world?
+- long_term_interest: how to build reliable personal systems that combine human judgment, durable storage, and agent-assisted workflows?
 - current_focus:
-  - Agent-based data synthesis
-  - Benchmarks for science-related domains
-  - Reward design / calibration signals for LLM learning
+  - Personal knowledge protocols
+  - Agent-assisted information intake
+  - Evaluation and calibration for long-lived workflows
 
 ## Education / 教育背景
 
-- HKUST(GZ): Incoming PhD Student in Artificial Intelligence · Fall 2026 · Advisor: Prof. Linfeng Zhang
-- Fudan University: Master of Finance (FinTech) · 2024.09–2026.06 · Entrance Scholarship: RMB 55,000
-- UESTC: Dual-degree "Internet+" Elite Program · 2020.09–2024.06 · Finance + Data Science · GPA: 91.08/100 · National Scholarship
+- Public Research University A: Graduate Program in Computing · 2026.09–2028.06
+- Comprehensive University B: Interdisciplinary Master Program · 2024.09–2026.06
+- Public University C: Undergraduate Program in Quantitative Studies · 2020.09–2024.06
 
 ## Experience / 经历
 
-- Alibaba – Platform Technology × SJTU: Academic Collaboration · 2025.11–Present · Agent-based data synthesis and benchmark construction
-- ByteDance — Data-AML: Scientific Computing Intern · 2024.06–2024.08 · Back-end Development
-- EPIC Lab (SJTU): Research Assistant · 2025.03–Present · Advisor: Prof. Linfeng Zhang
+- Research Lab A: Research collaboration · 2025.11–Present · Knowledge workflow evaluation and agent-assisted tooling
+- Tech Company B: Applied engineering intern · 2024.06–2024.08 · Back-end development
+- University Lab C: Research assistant · 2025.03–Present · Information workflow support
 
 ## Publications / 发表
 
-- HiCache: A Plug-in Scaled-Hermite Upgrade for Taylor-Style Cache-then-Forecast Diffusion Acceleration · Under review at ICLR 2026 · Liang Feng*, et al. (Co-first Author)
-- Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers · Accepted (Poster) at AAAI 2026 · Co-first Author (2nd)
+- Paper A: Example benchmark and workflow paper · Under review
+- Paper B: Example systems paper · Workshop / poster
 
 ## Honors & Awards / 荣誉
 
-- Fudan SOE Entrance Scholarship (2024)
-- National Scholarship (2020–2021)
-- Outstanding Graduate, UESTC (2024)
-- Provincial Second Prize, FLTRP English Challenge (2022)
-- Sichuan Provincial High School Physics Competition: Second Prize (2017)
+- Graduate scholarship (example)
+- University-level outstanding student award (example)
+- Competition prize (example)

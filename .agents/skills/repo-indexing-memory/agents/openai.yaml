@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Indexing Memory"
+  short_description: "Build/validate concept-to-evidence indexing outputs."
+  default_prompt: "Use $repo-indexing-memory to run the repo indexing pipeline with v1_1 defaults and summarize regressions."

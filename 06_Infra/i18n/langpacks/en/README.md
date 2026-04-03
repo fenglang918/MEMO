@@ -4,142 +4,107 @@
 
 An AI-native personal operating system protocol.
 
-Turn ephemeral memories into durable objects.
+This repository is the **public template product** of MEMO: it keeps i18n, sanitized examples, `USAGE.md`, and agent workflows, while backporting the newer protocol, directory semantics, and skills from the private working repo; `06_Infra/indexing/` is kept only as an optional experiment.
 
-Repo: https://github.com/fenglang918/MEMO
+## What This Is
 
-> **What we choose to record reveals what we choose to value.**
+MEMO is not a single app. It is a protocol for organizing long-lived personal records:
 
----
+- Markdown and Git hold the data
+- directory semantics define object boundaries
+- agents and scripts operate on top of the repo
 
-## What this is
+Core stance:
 
-**MEMO** is an **AI-native personal operating system protocol**: a way to turn fleeting thoughts, experiences, relationships, decisions, and reflections into **structured, versioned, evolvable objects** stored in a plain Git repo.
-
-This repository is the **shareable template** of that protocol.
-
-**Traits**: Markdown-first · Git versioning · search-first · low maintenance
-
----
-
-## Why MEMO
-
-Most tools solve “storage”. MEMO focuses on **selection**:
-
-> What is worth becoming a long-lived object?
-
-In the AI-memory era, the real question is ownership and portability:
-
-> Who owns your memory? Can you control it, migrate it, and combine it across models?
-
-### Protocol first, agent agnostic
-
-MEMO is not an “app”; it’s a **file-system-level protocol**.
-
-| Dimension | Typical tools / AI memory | MEMO protocol |
-|---|---|---|
-| Ownership | platform-owned | you own it (local Git) |
-| Format | proprietary | plain Markdown |
-| Model lock-in | tied to one AI | any AI / any agent |
-| Management | via official app | via any code agent |
-| Source integration | limited | any life fragments |
-
-Core architecture: **storage and intelligence are decoupled**.
-
-```
-any fragments -> MEMO (local Git) -> any AI / code agent
-        ^                          v
-  you own the repo             models are replaceable CPUs
-```
-
----
+- **Protocol first**
+- **Agent agnostic**
+- **Search before summary**
 
 ## Layout
 
 ```text
 .
-├── 00_Protocol/             # Protocol: schemas, usage/privacy, templates
-├── 01_Inbox/                # Ephemeral inputs
-├── 02_Desires/              # Upstream drivers (values/preferences)
-├── 03_Goal-Projects/        # Projects (TPCD)
-├── 04_Assets/               # Assets (ME): stable “what I have”
-├── 05_Resources/            # Resources (MO): callable external leverage
-└── 06_Infra/                # Infra (optional): scripts / agent skills
+├── 00_Protocol/             # contracts / federation / usage / privacy
+├── 01_Inbox/                # temporary intake
+├── 02_Desires/              # upstream drivers
+├── 03_Goal-Projects/        # TPCD + YYYY/MM/
+├── 04_Assets/               # stable personal assets
+├── 05_Resources/            # callable external resources
+├── 06_Infra/                # indexing / i18n / utilities
+├── 07_Principles/           # cross-project principles
+├── 08_Operations/           # schedule / time-tracking / setup
+├── .agents/skills/          # agent skill packages
+└── develop/                 # template development workspace
 ```
 
-Note: the repo layout will keep evolving; when docs and folders disagree, trust the current directory structure.
+## Project Shape
 
-### Assets vs Resources
+`03_Goal-Projects/` now has two main entry styles:
 
-| | Assets | Resources |
-|---|---|---|
-| Question | what I HAVE | what I can USE |
-| Nature | stable, “showcase” | requires maintenance |
-| Examples | resume, portfolio, skills | people, APIs, venues |
+- `YYYY/MM/<project>/`
+- `evergreen/<project>/`
 
-Transformation: `Resource + Action = Asset`
+Each project follows **TPCD**:
 
-### Project shape (TPCD)
+- `README.md` = Target
+- `PLAN.md` = Plan
+- `cognition/` = Cognition
+- `decisions/` = Decision
 
-```text
-03_Goal-Projects/active/<project>/
-├── README.md     # Target
-├── PLAN.md       # Plan
-├── cognition/    # Cognition notes
-└── decisions/    # ADR-style decisions
-```
+## Quick Start
 
----
-
-## Quick start
-
-1. Fork / clone / use as template
-2. (Optional) If you want to start from an “empty skeleton”: `python3 06_Infra/cleanup_examples.py --apply` (archived & restorable)
-3. Generate `AGENTS.md` at repo root via your code agent `/init` (recommended)
-4. Use `rg` (ripgrep) to search-first
-5. Start from `01_Inbox/` and review weekly
+1. Use the repo as a template or clone it locally.
+2. Start by reading the target directory's `README.md` / `index.md` / `AGENTS.md`.
+3. Optionally clean built-in examples with `cleanup_examples.py`.
+4. Generate your own repo-level `AGENTS.md` from `00_Protocol/AGENTS.md.template`.
+5. Only if you want to revisit the old indexing experiment, run the script in `06_Infra/indexing/`.
 
 ```bash
-rg -n "keyword" 05_Resources/network/people
-rg -n "#resource/intro" 05_Resources/network/people
+python3 06_Infra/cleanup_examples.py
 ```
 
-### AI native (recommended)
+## Agent Entry Points
 
-- Use `AGENTS.md` to pin constraints (boundaries, naming, safety baseline, checks).
-- Use `00_Protocol/AGENTS.md.template` as a starting point: keep `00_Protocol/` “protocol only”, and put executable skills/scripts in `06_Infra/`.
+- Protocol: `00_Protocol/`
+- Skills: `.agents/skills/`
+- Optional indexing experiment: `06_Infra/indexing/`
 
-### Language switch (optional)
+Recommended lookup order:
 
-Switch key docs (README / prompts / skills / selected templates & examples) via `06_Infra/i18n/`:
+```text
+repo structure / file naming
+  -> matching domain README / index / AGENTS
+  -> 00_Protocol summary docs only when needed
+```
 
-- List languages: `python3 06_Infra/i18n/switch_language.py --list`
-- Switch to Chinese: `python3 06_Infra/i18n/switch_language.py --lang zh --apply --backup`
-- Switch to English: `python3 06_Infra/i18n/switch_language.py --lang en --apply --backup`
+## Language Packs and Examples
 
-### Clean examples (optional)
+This template keeps:
 
-This repo ships with a small set of **sanitized examples** (people card / projects / desires / profile) to demonstrate structure. You can archive-clean them and restore anytime:
+- `06_Infra/i18n/` for zh/en langpacks
+- sanitized example projects / people cards / principles
+- `08_Operations/` schedule and time-tracking scaffolding
+- `06_Infra/plugins/master-schedule/` scripts for calendar sync and reports
+- `00_Protocol/USAGE.md` as the onboarding page
 
-- Dry-run: `python3 06_Infra/cleanup_examples.py`
-- Apply (archive & restorable): `python3 06_Infra/cleanup_examples.py --apply`
-- List archives: `python3 06_Infra/cleanup_examples.py --list-archives`
-- Restore: `python3 06_Infra/cleanup_examples.py --restore <timestamp> --apply` (add `--force` if needed)
+If you want a cleaner skeleton:
 
----
+- `python3 06_Infra/cleanup_examples.py`
+- `python3 06_Infra/cleanup_examples.py --apply`
 
-## Core workflows
+## Fit
 
-| Workflow | Entry | Purpose / cadence |
-|---|---|---|
-| Desires | [`02_Desires/README.md`](02_Desires/README.md) | monthly/quarterly review of drivers |
-| Inbox | [`01_Inbox/README.md`](01_Inbox/README.md) | weekly: turn into objects or delete |
-| Personal CRM | [`05_Resources/network/index.md`](05_Resources/network/index.md) | when you need intros / recall / follow-up |
-| Projects (TPCD) | [`03_Goal-Projects/README.md`](03_Goal-Projects/README.md) | one goal = one project folder |
-| Usage | [`00_Protocol/USAGE.md`](00_Protocol/USAGE.md) | onboarding & conventions |
-| Privacy baseline | [`00_Protocol/PRIVACY.md`](00_Protocol/PRIVACY.md) | read before publishing |
+Good fit:
 
----
+- long-lived, portable, searchable personal records
+- local-first workflows with code agents
+- separating content structure from tooling
+
+Not a fit:
+
+- passive note dumping
+- no-structure, everything-goes logs
+- storing directly abusable plaintext secrets
 
 ## License
 

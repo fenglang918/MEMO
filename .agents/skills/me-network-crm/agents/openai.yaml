@@ -1,0 +1,4 @@
+interface:
+  display_name: "Me Network CRM"
+  short_description: "Maintain Personal CRM cards in 05_Resources/network."
+  default_prompt: "Use $me-network-crm to add, update, or query people cards in this MEMO repo."

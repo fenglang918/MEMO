@@ -11,13 +11,13 @@ from pathlib import Path
 
 REQUIRED_RELATIVE_PATHS = (
     Path("README.md"),
-    Path("06_Infra/skills/portable/prism.md"),
-    Path("06_Infra/skills/native/me-network-crm/SKILL.md"),
+    Path(".agents/skills/prism/SKILL.md"),
+    Path(".agents/skills/me-network-crm/SKILL.md"),
 )
 
 
 def _repo_root() -> Path:
-    # .../MEMO/public/repo/06_Infra/i18n/switch_language.py -> repo root is parents[2]
+    # .../memo-publishing/pre-publish/repo/06_Infra/i18n/switch_language.py -> repo root is parents[2]
     return Path(__file__).resolve().parents[2]
 
 
@@ -148,4 +148,3 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
-

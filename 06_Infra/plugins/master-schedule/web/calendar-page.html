@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEMO Master Schedule - Calendar</title>
+  <link rel="stylesheet" href="vendor/toastui-calendar.min.css?v=20260219-2550" />
+  <link rel="stylesheet" href="calendar-page.css?v=20260219-2550" />
+</head>
+<body>
+  <div class="page">
+    <section class="topbar">
+      <h1>总日程日历</h1>
+      <div class="calendar-links">
+        数据源：<code>calendar.md</code> · <code>weekly.md</code> · <code>milestones.md</code> · <code>README.md</code>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div class="toolbar-group">
+        <button id="prevBtn" type="button">◀</button>
+        <button id="todayBtn" type="button">今天</button>
+        <button id="nextBtn" type="button">▶</button>
+      </div>
+      <div class="toolbar-group">
+        <button class="view-btn" type="button" data-view="month">月</button>
+        <button class="view-btn" type="button" data-view="week">周</button>
+        <button class="view-btn" type="button" data-view="day">日</button>
+      </div>
+      <span id="rangeLabel"></span>
+    </section>
+
+    <section class="legend">
+      <span class="item"><span class="dot done"></span>完成</span>
+      <span class="item"><span class="dot todo"></span>待完成</span>
+      <span class="item"><span class="dot month-only"></span>月任务（无具体日期）</span>
+    </section>
+
+    <section class="calendar-wrap">
+      <section class="calendar-frame" aria-live="polite">
+        <div id="toastCalendar"></div>
+      </section>
+      <aside class="month-summary">
+        <h2 id="summaryTitle">当月任务清单</h2>
+        <ul id="monthEventList"></ul>
+      </aside>
+    </section>
+
+    <section class="status" id="status"></section>
+  </div>
+
+  <script src="vendor/toastui-calendar.min.js?v=20260219-2550"></script>
+  <script src="calendar-page-data.js?v=20260219-2550"></script>
+  <script src="calendar-page.js?v=20260219-2550"></script>
+</body>
+</html>

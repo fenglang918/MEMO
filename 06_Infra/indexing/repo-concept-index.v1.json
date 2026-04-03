@@ -1,0 +1,686 @@
+{
+  "version": "v1.1",
+  "profile": "v1_1",
+  "built_at": "2026-04-03T13:47:53.085458+00:00",
+  "scope": [
+    "00_Protocol",
+    "03_Goal-Projects",
+    "05_Resources/network",
+    "07_Principles",
+    "08_Operations"
+  ],
+  "files_scanned": 55,
+  "policy": {
+    "max_evidence_per_concept": 12,
+    "kind_quota": {
+      "review": 4,
+      "decision": 4,
+      "cognition": 3,
+      "index": 1
+    }
+  },
+  "concepts": [
+    {
+      "concept_id": "goal-tracking",
+      "concept": "Goal Tracking",
+      "aliases": [
+        "target",
+        "milestone",
+        "okr",
+        "progress"
+      ],
+      "scope": [
+        "03_Goal-Projects"
+      ],
+      "last_built_at": "2026-04-03T13:47:53.085458+00:00",
+      "evidence_total_before_policy": 16,
+      "evidence": [
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/README.md",
+          "title": "MEMO 开源模板（示例项目 / Target）",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/cognition/001-开源意义-人生memory协议.md",
+          "title": "Cognition 001：开源意义——人生 memory 的协议与参考实现",
+          "kind": "cognition",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/milestones.md",
+          "title": "Milestones",
+          "kind": "other",
+          "match_basis": [
+            "filename",
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 10,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/phd-vs-job/README.md",
+          "title": "学术研究路径 vs 直接工作（Target）",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/_TEMPLATE/README.md",
+          "title": "Project Name / 项目名（Target）",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/_TEMPLATE/PLAN.md",
+          "title": "Project Name / 项目名（Plan）",
+          "kind": "other",
+          "match_basis": [
+            "heading",
+            "content"
+          ],
+          "score": 3,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/USAGE.md",
+          "title": "Usage / 使用说明",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/definitions.md",
+          "title": "Definitions（核心术语）",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/schemas/indexing-contract.v1.md",
+          "title": "Indexing Contract Draft v1 (`on hold`)",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/schemas/repo-contents-contract.v1.md",
+          "title": "Repo Contents Contract v1",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/README.md",
+          "title": "Projects",
+          "kind": "index",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/_docs/concepts.md",
+          "title": "核心概念说明",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        }
+      ]
+    },
+    {
+      "concept_id": "decision-review",
+      "concept": "Decision Review",
+      "aliases": [
+        "decision",
+        "trade-off",
+        "rationale",
+        "adr"
+      ],
+      "scope": [
+        "03_Goal-Projects",
+        "07_Principles"
+      ],
+      "last_built_at": "2026-04-03T13:47:53.085458+00:00",
+      "evidence_total_before_policy": 32,
+      "evidence": [
+        {
+          "path": "03_Goal-Projects/2026/01/phd-vs-job/decisions/README.md",
+          "title": "Decisions（决策日志）",
+          "kind": "decision",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/decisions/000-template.md",
+          "title": "ADR 000：标题",
+          "kind": "decision",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/decisions/001-dual-track-repo-and-web-playground.md",
+          "title": "ADR 001：双轨发布（GitHub 协议仓库 + Web Playground）",
+          "kind": "decision",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/decisions/001-events-and-signals.md",
+          "title": "ADR 001：是否把 Events / Signals 作为一级对象",
+          "kind": "decision",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/cognition/001-开源意义-人生memory协议.md",
+          "title": "Cognition 001：开源意义——人生 memory 的协议与参考实现",
+          "kind": "cognition",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/cognition/002-对话总结-开源与传播策略.md",
+          "title": "Cognition 002：对话总结——开源与传播策略（脱敏示例）",
+          "kind": "cognition",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/phd-vs-job/README.md",
+          "title": "学术研究路径 vs 直接工作（Target）",
+          "kind": "index",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/phd-vs-job/cognition/001-phd-vs-job-essence.md",
+          "title": "Cognition 001：学术研究路径 vs 直接工作 —— 本质区别与评价维度",
+          "kind": "cognition",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/phd-vs-job/decisions/001-choose-path.md",
+          "title": "ADR 001：选择学术研究路径还是直接工作",
+          "kind": "decision",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/_TEMPLATE/decisions/000-template.md",
+          "title": "ADR 000: Title / ADR 000：标题",
+          "kind": "decision",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/decision-principles-time-value-and-autonomy.md",
+          "title": "Stub: Principles Moved",
+          "kind": "other",
+          "match_basis": [
+            "filename",
+            "path"
+          ],
+          "score": 4,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/_TEMPLATE/PLAN.md",
+          "title": "Project Name / 项目名（Plan）",
+          "kind": "other",
+          "match_basis": [
+            "heading",
+            "content"
+          ],
+          "score": 3,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        }
+      ]
+    },
+    {
+      "concept_id": "personal-crm",
+      "concept": "Personal CRM",
+      "aliases": [
+        "network",
+        "people card",
+        "contact",
+        "relationship"
+      ],
+      "scope": [
+        "05_Resources/network"
+      ],
+      "last_built_at": "2026-04-03T13:47:53.085458+00:00",
+      "evidence_total_before_policy": 15,
+      "evidence": [
+        {
+          "path": "05_Resources/network/index.md",
+          "title": "Network (Personal CRM) / Network（人脉库）",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/cognition/002-对话总结-开源与传播策略.md",
+          "title": "Cognition 002：对话总结——开源与传播策略（脱敏示例）",
+          "kind": "cognition",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/cognition/003-迭代记录-从想法到可发布模板.md",
+          "title": "Cognition 003：迭代记录——从想法到可发布模板（脱敏）",
+          "kind": "cognition",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/decisions/001-events-and-signals.md",
+          "title": "ADR 001：是否把 Events / Signals 作为一级对象",
+          "kind": "decision",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "05_Resources/network/requirements-architecture.md",
+          "title": "Personal CRM: Requirements & Architecture / 人脉库：需求与架构",
+          "kind": "other",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/USAGE.md",
+          "title": "Usage / 使用说明",
+          "kind": "other",
+          "match_basis": [
+            "heading",
+            "content"
+          ],
+          "score": 3,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "05_Resources/network/_cli/README.md",
+          "title": "CLI (optional) / 命令行工具（可选）",
+          "kind": "index",
+          "match_basis": [
+            "path",
+            "content"
+          ],
+          "score": 2,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/MEMO-extractor-brief.v1.md",
+          "title": "MEMO Extractor Brief v1",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/PRIVACY.md",
+          "title": "Privacy Baseline / 隐私基线",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/schemas/indexing-contract.v1.md",
+          "title": "Indexing Contract Draft v1 (`on hold`)",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/schemas/protocol-federation-map.v1.md",
+          "title": "Protocol Federation Map v1",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "03_Goal-Projects/2026/01/MEMO-开源模板发布/PLAN.md",
+          "title": "MEMO 开源模板（示例项目 / Plan）",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        }
+      ]
+    },
+    {
+      "concept_id": "example-archiving",
+      "concept": "Example Archiving",
+      "aliases": [
+        "cleanup",
+        "archive",
+        "template example",
+        "dry-run"
+      ],
+      "scope": [
+        "06_Infra",
+        "01_Inbox"
+      ],
+      "last_built_at": "2026-04-03T13:47:53.085458+00:00",
+      "evidence_total_before_policy": 4,
+      "evidence": [
+        {
+          "path": "08_Operations/00_Master-Schedule/README.md",
+          "title": "Master Schedule",
+          "kind": "index",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/USAGE.md",
+          "title": "Usage / 使用说明",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/inbox.md",
+          "title": "Schedule Inbox",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/README.md",
+          "title": "Operations",
+          "kind": "index",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        }
+      ]
+    },
+    {
+      "concept_id": "life-ops",
+      "concept": "Life Operations",
+      "aliases": [
+        "schedule",
+        "time tracking",
+        "operations",
+        "setup"
+      ],
+      "scope": [
+        "08_Operations"
+      ],
+      "last_built_at": "2026-04-03T13:47:53.085458+00:00",
+      "evidence_total_before_policy": 18,
+      "evidence": [
+        {
+          "path": "08_Operations/00_Master-Schedule/README.md",
+          "title": "Master Schedule",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/calendar.md",
+          "title": "Calendar (Master Schedule)",
+          "kind": "other",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/inbox.md",
+          "title": "Schedule Inbox",
+          "kind": "other",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/Mac-Setup/README.md",
+          "title": "Mac Setup",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/README.md",
+          "title": "Operations",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "path",
+            "content"
+          ],
+          "score": 7,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/01_Time-Tracking/README.md",
+          "title": "Time Tracking",
+          "kind": "index",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/01_Time-Tracking/reports/latest.md",
+          "title": "Time Tracking Report",
+          "kind": "other",
+          "match_basis": [
+            "title",
+            "heading",
+            "content"
+          ],
+          "score": 6,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/USAGE.md",
+          "title": "Usage / 使用说明",
+          "kind": "other",
+          "match_basis": [
+            "heading",
+            "content"
+          ],
+          "score": 3,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/auto-timeline.md",
+          "title": "Auto Timeline (from Projects)",
+          "kind": "other",
+          "match_basis": [
+            "path",
+            "content"
+          ],
+          "score": 2,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "08_Operations/00_Master-Schedule/milestones.md",
+          "title": "Milestones",
+          "kind": "other",
+          "match_basis": [
+            "path",
+            "content"
+          ],
+          "score": 2,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/MEMO-extractor-brief.v1.md",
+          "title": "MEMO Extractor Brief v1",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        },
+        {
+          "path": "00_Protocol/schemas/indexing-contract.v1.md",
+          "title": "Indexing Contract Draft v1 (`on hold`)",
+          "kind": "other",
+          "match_basis": [
+            "content"
+          ],
+          "score": 1,
+          "last_verified_at": "2026-04-03T13:47:53.085458+00:00"
+        }
+      ]
+    }
+  ]
+}

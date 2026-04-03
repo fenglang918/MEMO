@@ -1,0 +1,25 @@
+concepts:
+  - id: goal-tracking
+    concept: Goal Tracking
+    aliases: [target, milestone, okr, progress]
+    scope: [03_Goal-Projects]
+
+  - id: decision-review
+    concept: Decision Review
+    aliases: [decision, trade-off, rationale, adr]
+    scope: [03_Goal-Projects, 07_Principles]
+
+  - id: personal-crm
+    concept: Personal CRM
+    aliases: [network, people card, contact, relationship]
+    scope: [05_Resources/network]
+
+  - id: example-archiving
+    concept: Example Archiving
+    aliases: [cleanup, archive, template example, dry-run]
+    scope: [06_Infra, 01_Inbox]
+
+  - id: life-ops
+    concept: Life Operations
+    aliases: [schedule, time tracking, operations, setup]
+    scope: [08_Operations]

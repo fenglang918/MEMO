@@ -8,8 +8,10 @@ Goal: treat “people” as a searchable, actionable resource. One person = one 
 
 - `people/`: person cards
 - `people/_template.md`: template
+- `AGENTS.md`: module instructions
 - `requirements-architecture.md`: design rationale
 - `/_cli/network.py` (optional): lightweight query script
+- `../../.agents/skills/me-network-crm/SKILL.md`: agent workflow entry
 
 ## Naming / 命名
 
@@ -31,3 +33,17 @@ Recommended prefixes:
 
 - `rg -n "#resource/intro" 05_Resources/network/people`
 - `python3 05_Resources/network/_cli/network.py --tag '#resource/intro' --json` (optional)
+
+## Agent Entry / Agent 入口
+
+- `../../.agents/skills/me-network-crm/SKILL.md`
+  - 默认 CRM workflow 入口
+  - 适合录入联系人、更新 card、按标签检索、处理外部资料 ingest
+
+## Recommended Reading Order / 推荐阅读顺序
+
+1. `index.md`
+2. `people/_template.md`
+3. `AGENTS.md`
+4. `requirements-architecture.md`
+5. `../../.agents/skills/me-network-crm/SKILL.md`

@@ -1,7 +1,7 @@
 # Desires (Template)
 
 > This is a desire pool. A desire does not need to become a project immediately.
-> When a desire has enough evidence/urgency/executable path, convert it into `03_Goal-Projects/active/<project>/`.
+> When a desire has enough evidence, urgency, and an executable path, convert it into `03_Goal-Projects/YYYY/MM/<project>/` or `03_Goal-Projects/evergreen/<project>/`.
 > See `desires.example.md` for a writing example.
 
 ## Active (Top)

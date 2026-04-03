@@ -1,0 +1,41 @@
+{
+  "name": "memo-audio-transcribe",
+  "version": "0.1.0",
+  "description": "Offline audio transcription for MEMO: bootstrap venv + download Whisper small (CTranslate2) + write transcripts into 01_Inbox.",
+  "author": {
+    "name": "richarddaemon",
+    "email": "[TODO: email]",
+    "url": "[TODO: url]"
+  },
+  "homepage": "[TODO: homepage]",
+  "repository": "[TODO: repository]",
+  "license": "[TODO: license]",
+  "keywords": [
+    "memo",
+    "audio",
+    "transcribe",
+    "whisper",
+    "offline"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MEMO Audio Transcribe",
+    "shortDescription": "Offline audio → transcript into MEMO 01_Inbox",
+    "longDescription": "Transcribe local audio files (mp3/m4a/wav) offline using Whisper small (CTranslate2) and write transcript outputs into MEMO/01_Inbox.",
+    "developerName": "richarddaemon",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "[TODO: website]",
+    "privacyPolicyURL": "[TODO: privacy]",
+    "termsOfServiceURL": "[TODO: terms]",
+    "defaultPrompt": [
+      "Transcribe this mp3 into a Markdown transcript in MEMO inbox.",
+      "Turn this meeting recording into transcript.txt + transcript.md.",
+      "Batch transcribe these audio files and save outputs under 01_Inbox."
+    ],
+    "brandColor": "#3B82F6"
+  }
+}

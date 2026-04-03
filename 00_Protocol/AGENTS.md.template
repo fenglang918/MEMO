@@ -1,47 +1,146 @@
-# For Codex/Cursor/Claude（MEMO）
+# For Codex/Cursor/Claude（MEMO Template）
 
-你正在一个 **MEMO 仓库** 里工作：一个 AI-native 的个人记忆/经验协议与数据系统。
+你正在一个 **MEMO 模板仓库** 里工作。它是一个 AI-native 的个人记录协议仓库，不是单一项目 repo，也不是某个固定 App 的数据目录。
 
-## 使用方式（推荐）
+## 使用方式
 
-- 推荐用 Code Agent 的 `/init` 生成本仓库的 `AGENTS.md`（并按你的使用习惯微调）。
-- 这份模板文件用于给 `/init` 或你自己复制改写：`00_Protocol/AGENTS.md.template`。
+- 推荐在仓库根目录用 Code Agent 的 `/init` 生成 `AGENTS.md`
+- 这份模板文件位于 `00_Protocol/AGENTS.md.template`
+- 如需规划类沉淀，默认把计划文档放到 `develop/plans/`
 
-## 核心哲学（必须遵守）
+## 核心原则（必须遵守）
 
-- **MEMO 是协议**：目录与文件名首先表达“要记录什么（Objects）”，而不是“怎么实现/给谁用”。
-- **Protocol First**：`00_Protocol/` 只定义对象与规则（schemas/约束/术语/使用说明），避免塞入执行逻辑。
-- **Infra 承载可执行**：Agent 技能、脚本、一键工具放在 `06_Infra/`（例如 `06_Infra/skills/`）。
-- **Storage 与 Intelligence 解耦**：仓库是数据与协议；AI/Agent 是可替换的“CPU”。
+- **Protocol First**：先理解目录语义与对象边界，再检索，再下结论。
+- **MEMO 是协议，不是 App**：目录先表达“记录什么”，再决定“由谁操作 / 用什么工具操作”。
+- **Storage 与 Intelligence 解耦**：仓库存数据与结构；AI / Agent / script 是可替换执行层。
+- **Search Before Summary**：先读入口与证据，再输出总结。
+- **逢引用必内链**：引用仓库内内容时，附精确相对路径。
 
-## 目录约定（当前结构）
+## 默认导航顺序（重要）
 
-- `00_Protocol/`：协议层（schemas、术语、使用说明、隐私基线）
-- `01_Inbox/`：短暂碎片入口
-- `02_Desires/`：上游驱动（偏好/价值观/愿望）
+1. 先看仓库目录结构与文件命名
+2. 进入命中的域，读对应 `README.md` / `index.md` / `AGENTS.md`
+3. 如需总协议，再看 `00_Protocol/`
+4. 如仍需补充检索，再由 Agent 自主选择 `rg` 或其他方法
+
+不要在未读目标域入口前就说“仓库里没有相关资料”。
+
+## 目录约定（9 个主域）
+
+- `00_Protocol/`：协议层
+- `01_Inbox/`：临时输入
+- `02_Desires/`：上游驱动
 - `03_Goal-Projects/`：目标与项目（TPCD）
-- `04_Assets/`：存量资产（ME）
-- `05_Resources/`：可调用资源（MO）
-- `06_Infra/`：基础设施（Agent skills、脚本、一键工具）
+- `04_Assets/`：稳定资产
+- `05_Resources/`：可调用资源
+- `06_Infra/`：脚本、插件、i18n、可选 indexing 实验
+- `07_Principles/`：跨项目原则
+- `08_Operations/`：日程、时间追踪、环境运维
+- `develop/`：模板自身开发工作区
 
-## “skills” 的两种含义（避免混淆）
+## 路径与命名约定
 
-- `04_Assets/skills/`：你的技能画像（个人资产的一部分，内容是“你有什么能力”）
-- `06_Infra/skills/`：Agent 技能（可执行指令/脚本，内容是“Agent 怎么操作这个仓库”）
+- 新增目录名、文件名、导出路径默认使用英文 ASCII
+- 默认使用 `kebab-case` 或模块内现有英文命名风格
+- 文档内容可以写中文，但路径本身优先英文，便于脚本处理、链接稳定与后续发布
+- 不要为了“统一命名”擅自批量重命名历史路径；如果已有真源或外部链接依赖，优先保持稳定
 
-## 安全底线（无论仓库是否公开）
+## 目录级建议入口
 
-- 不要写入可直接滥用的 **明文机密**：账号密码、私钥、API keys、tokens 等（用占位符/环境变量/私密渠道）。
-- 若你明确要“公开发布/开源/同步到公网”，再额外执行脱敏：手机号、住址、私密人际细节、未公开身份信息等一律不写。
+- 涉及跨项目 trade-off、资源分配、协作边界：先看 `07_Principles/README.md`
+- 涉及总日程、Apple Calendar、time tracking：先看 `08_Operations/README.md`
+- 如果任务已经落到总日程模块，再按顺序看：
+  - `08_Operations/00_Master-Schedule/README.md`
+  - `06_Infra/plugins/master-schedule/README.md`
+  - `.agents/skills/master-schedule-sync/SKILL.md`
+  - `08_Operations/01_Time-Tracking/README.md`
+- 涉及可选本地 bridge / 插件扩展：先看
+  - `06_Infra/README.md`
+  - `06_Infra/plugins/lark-bridge/README.md`
+  - `06_Infra/plugins/Google-Drive/README.md`
+  - `.agents/plugins/README.md`
+  - `plugins/README.md`
 
-## 变更策略（避免破坏稳定性）
+## 项目目录约定
 
-- 结构调整优先用 `git mv`，保证历史与链接可追踪。
-- 不要做无意义的大范围格式化；保持 diff 最小化、可回滚。
-- 若发现“文档描述”与“当前结构”不一致：以当前结构为准，并更新文档使其一致。
+- 时间归档项目：`03_Goal-Projects/YYYY/MM/<project>/`
+- 常驻项目：`03_Goal-Projects/evergreen/<project>/`
+- 每个项目默认遵循 TPCD：
+  - `README.md`
+  - `PLAN.md`
+  - `cognition/`
+  - `decisions/`
+
+## Skills 路径（避免混淆）
+
+- `04_Assets/skills/`：个人能力画像
+- `.agents/skills/`：Agent 可执行技能包
+- `.agents/plugins/`：Codex 本地插件市场配置
+- `plugins/`：可选 Codex 本地插件
+
+模板当前优先入口：
+
+- `.agents/skills/master-schedule-sync/`
+- `.agents/skills/inbox-folder-archiver/`
+- `.agents/skills/me-network-crm/`
+- `.agents/skills/prism/`
+
+说明：
+
+- `master-schedule-sync/` 负责 `calendar.md -> Apple Calendar`、反向 pull、双向一键联动
+- `repo-indexing-memory/` 当前仅用于回看旧 indexing 实验，不是默认工作流
+- `lark-bridge/` 是公开模板保留的可选 read-first bridge
+- `plugins/memo-audio-transcribe/` 是公开模板保留的本地插件示例
+- `06_Infra/plugins/Google-Drive/` 是公开模板保留的云盘挂载 / 同步骨架
+- 仍然不要默认假设模板用户一定具备所有可选 bridge / plugin 的本机环境
+
+## Optional Indexing
+
+如需回看旧实验，可运行：
+
+```bash
+python3 06_Infra/indexing/scripts/build_repo_concept_index.py \
+  --profile v1_1 \
+  --summary-json 06_Infra/indexing/reports/index-summary.v1_1.json
+```
+
+## 交互默认模式与建议边界
+
+- 默认模式是“执行 / 记录优先”，不是“顾问式建议优先”
+- 在用户没有明确要求“给建议 / 做规划 / 提供方案”时，不主动输出大量泛化建议
+- 信息不足时，优先澄清少量关键问题，或先按请求做记录、整理、改写、执行
+
+## 安全底线
+
+- 不写入可直接滥用的明文机密：密码、私钥、API keys、tokens 等
+- 若明确要公开发布，再额外做脱敏：手机号、住址、私密关系细节、未公开身份信息等
+
+<!-- CODEX:BEGIN user-approval-guardrails -->
+## Codex Guardrails (User Confirmation Required)
+
+- Never run `git commit` unless the user explicitly asks in the current thread.
+- Never run `git push` (including pushing tags) unless the user explicitly asks in the current thread, or the current thread clearly treats `commit + push` as one bundled action.
+- Default interpretation in this repo: when the user asks to "commit", treat it as `commit + push` unless they explicitly say `commit only`, `no push`, or equivalent.
+- If asked to commit under the default bundled flow: show `git status --porcelain` and `git diff --stat`, propose an exact commit message, state the exact remote + branch/ref to be pushed, then wait for one explicit confirmation before running both `git commit` and `git push`.
+- If the user explicitly asks for `commit only`: show `git status --porcelain` and `git diff --stat`, propose an exact commit message, then wait for explicit confirmation before running `git commit` only.
+- Commit message standard (required):
+  - Subject format: `<type>(<scope>): <summary>` (or `<type>: <summary>` if no scope), and keep subject <= 72 chars.
+  - For non-trivial commits, include sections: `Why`, `Changes`, `Validation`, `Risk`.
+- If asked to push as a standalone action: state the exact remote + branch/ref to be pushed, then wait for explicit confirmation before running `git push`.
+<!-- CODEX:END user-approval-guardrails -->
+
+## 变更策略
+
+- 结构调整优先用 `git mv`
+- 保持 diff 最小化，不做无意义大格式化
+- 文档与结构不一致时，以当前结构为准并修正文档
 
 ## 常用自检
 
-- 查残留旧路径引用：`rg -n "\\b(protocol|inbox|desires|goal-projects|assets|resources|cli)/" -S .`
+- 查 legacy 命名残留：`rg -n "active/|portable/|native/|core/" .`
+- 检查 master-schedule 脚本：`python3 -m py_compile 06_Infra/plugins/master-schedule/scripts/*.py`
+- 检查本地转录插件：`python3 -m py_compile plugins/memo-audio-transcribe/scripts/*.py`
+- 检查 lark-bridge shell：`bash -n 06_Infra/plugins/lark-bridge/scripts/*.sh`
 - 检查 Network CLI：`python3 -m py_compile 05_Resources/network/_cli/network.py 05_Resources/network/_cli/validate_people.py`
-
+- 语言切换 dry-run：`python3 06_Infra/i18n/switch_language.py --lang en`
+- 示例清理 dry-run：`python3 06_Infra/cleanup_examples.py`

@@ -2,27 +2,30 @@
 
 ## Bio
 
-I'm a researcher focused on **AI agents** and **synthetic data**.
+I'm a researcher interested in **agent-assisted workflows**, **personal knowledge systems**, and **reliable long-term information management**.
 
-My long-term research interest: **How can intelligence grow and scale, while remaining precisely calibrated to the complexity of the real world?**
+My long-term question:
 
-Currently studying how to use **Agents** to synthesize data, improve LLM performance in **science-related domains**, and build the **benchmarks** that science needs.
+> How can we build personal systems that stay useful over time, while remaining grounded in real evidence and human judgment?
+
+Currently I care about:
+
+- Agent-assisted intake and organization
+- Durable Markdown + Git based knowledge workflows
+- Evaluation and calibration for long-lived systems
 
 ---
 
 ## Education
 
-### The Hong Kong University of Science and Technology (Guangzhou)
-**PhD Student** in Artificial Intelligence · Fall 2026  
-Advisor: Prof. Linfeng Zhang
+### Public Research University A
+Graduate Program in Computing · 2026–2028
 
-### Fudan University
-Master of Finance (FinTech) · 2024–2026  
-Entrance Scholarship
+### Comprehensive University B
+Interdisciplinary Master Program · 2024–2026
 
-### UESTC
-Dual-degree "Internet+" Elite Program · 2020–2024  
-Finance + Data Science. National Scholarship
+### Public University C
+Quantitative / Data-oriented Undergraduate Program · 2020–2024
 
 ---
 
@@ -30,24 +33,24 @@ Finance + Data Science. National Scholarship
 
 | Period | Organization | Role |
 |--------|--------------|------|
-| 2025.11–Present | Alibaba × SJTU | Academic Collaboration (Agent & Benchmark) |
-| 2025.03–Present | EPIC Lab (SJTU) | Research Assistant |
-| 2024.06–2024.08 | ByteDance | Scientific Computing Intern |
+| 2025.11–Present | Research Lab A | Workflow / evaluation collaboration |
+| 2025.03–Present | University Lab C | Research Assistant |
+| 2024.06–2024.08 | Tech Company B | Engineering Intern |
 
 ---
 
 ## Publications
 
-- **HiCache**: Plug-in Scaled-Hermite Upgrade for Cache-then-Forecast Diffusion Acceleration  
-  *Under review at ICLR 2026* (Co-first Author, 1st)
+- **Paper A**: Example benchmark / workflow paper  
+  *Under review*
 
-- **Forecast then Calibrate**: Feature Caching as ODE for Efficient Diffusion Transformers  
-  *AAAI 2026* (Co-first Author, 2nd)
+- **Paper B**: Example systems paper  
+  *Workshop / poster*
 
 ---
 
 ## Contact
 
-- Email: fenglang918@foxmail.com
-- GitHub: [fenglang918](https://github.com/fenglang918)
-- Website: [fenglang918.github.io](https://fenglang918.github.io)
+- Email: example@domain.test
+- GitHub: [example-user](https://github.com/example-user)
+- Website: [example.com](https://example.com)

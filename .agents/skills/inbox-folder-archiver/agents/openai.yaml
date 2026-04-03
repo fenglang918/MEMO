@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inbox Folder Archiver"
+  short_description: "Archive Inbox folders with structured outputs"
+  default_prompt: "Use $inbox-folder-archiver to process this 01_Inbox folder into a proper destination with raw preservation and structured outputs."

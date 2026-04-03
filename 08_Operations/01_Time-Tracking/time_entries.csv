@@ -1,0 +1,3 @@
+entry_id,date,start,end,duration_min,task,project,project_path,match_type,confidence,raw_input,created_at
+1,2026-03-03,09:30,11:00,90,MEMO 模板文档收口,MEMO-开源模板发布,03_Goal-Projects/2026/01/MEMO-开源模板发布,auto-match,0.88,2026-03-03 09:30-11:00 MEMO 模板文档收口,2026-03-03T11:01:00+08:00
+2,2026-03-03,14:00,15:20,80,学术界机会与工业界机会路径复盘,phd-vs-job,03_Goal-Projects/2026/01/phd-vs-job,auto-match,0.85,2026-03-03 14:00-15:20 学术界机会与工业界机会路径复盘,2026-03-03T15:21:00+08:00

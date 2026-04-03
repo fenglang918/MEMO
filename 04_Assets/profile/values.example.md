@@ -2,20 +2,22 @@
 
 ## Research Philosophy
 
-> **How can intelligence grow and scale, while remaining precisely calibrated to the complexity of the real world?**
+> Build systems that help people keep evidence, memory, and judgment aligned over time.
 
-This question drives my research direction:
-- **Synthetic Data**: As human-generated data is compressed into model intelligence, synthetic data becomes key for LLM self-learning and unbounded growth
-- **Calibration**: Continuously design high-quality benchmarks to calibrate model intelligence
-- **Reward Design**: Benchmarks are the ultimate reward in RL — propose challenging benchmarks, then use RL to train LLM self-learning
+This question drives my work:
+
+- **Durability**: important information should survive tool changes and time
+- **Calibration**: systems should make it easier to check evidence, not easier to hallucinate certainty
+- **Agency**: tools should strengthen human decision-making, not replace it blindly
 
 ---
 
 ## Core Values
 
-1. **Long-term thinking** - Value systems and protocols over quick hacks
-2. **Ownership** - Own your data, own your memory, own your life
-3. **Rational warmth** - Using rational tools (Git, Markdown, version control) to maintain memories and relationships
+1. **Long-term thinking** - prefer protocols and maintainable systems over short-lived hacks
+2. **Ownership** - keep important data in formats and structures you can still control years later
+3. **Groundedness** - make claims traceable to notes, sources, and actual decisions
+4. **Pragmatic warmth** - use structure and tooling to better care for work, memory, and relationships
 
-> **愿意为重要之物建立系统，本身就是一种温柔的理性。**  
-> 因为足够在意，才不愿意让它们随意流失。
+> 愿意为重要之物建立系统，本身就是一种长期主义。  
+> 因为足够在意，才会认真对待记录、证据与后续行动。

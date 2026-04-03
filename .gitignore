@@ -11,6 +11,10 @@ __pycache__/
 .memo_cleanup_backup/
 .memo_examples_archive/
 
+# Optional local cloud-sync mount / 可选本地云盘同步目录
+06_Infra/plugins/Google-Drive/sync-dir/*
+!06_Infra/plugins/Google-Drive/sync-dir/.gitkeep
+
 # Suggested private area / 建议的私密区
 private/
 

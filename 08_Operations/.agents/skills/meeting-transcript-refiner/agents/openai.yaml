@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meeting Transcript Refiner"
+  short_description: "Refine machine transcripts into polished docs and smart minutes."
+  default_prompt: "Refine this machine transcript into a complete polished document first, then generate an intelligent summary with decisions, actions, risks, and open questions."

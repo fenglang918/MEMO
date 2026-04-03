@@ -1,0 +1,4 @@
+interface:
+  display_name: "Artifact Feedback Sync"
+  short_description: "Sync deliverable feedback records and links"
+  default_prompt: "Use $artifact-feedback-sync to archive feedback for this deliverable with bidirectional links and a git snapshot."

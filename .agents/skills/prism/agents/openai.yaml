@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prism"
+  short_description: "Extract Facts/Inferences/Actions/Me-Info from raw social context."
+  default_prompt: "Use $prism to turn this raw screenshot/chat/profile context into a structured person-card draft."

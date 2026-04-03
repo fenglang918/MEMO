@@ -1,55 +1,60 @@
-# 04_Assets / 个人资料（Assets）
+# 04_Assets
 
-> **What I HAVE** — 稳定的、可"秀肌肉"的存量资产
+`04_Assets/` 是公开模板里的稳定存量层：放 **已经拥有、已经形成、或已经可稳定调用** 的内部存量，而不是仍待调用和转化的外部资源。
 
----
+和 [`../05_Resources/`](../05_Resources/) 的区别：
 
-## Structure
+- `04_Assets/` 更像已经入账、已经相对稳定的存量
+- `05_Resources/` 更像仍需调用、维护和转化的外部杠杆
 
-```
-04_Assets/
-├── profile/                # 核心画像（Profile）
-│   ├── README.md            # 模板 ← 你填写这里（公开简历/自我介绍）
-│   ├── README.example.md    # 示例（参考用）
-│   ├── values.md            # 模板（价值观/原则）
-│   ├── values.example.md    # 示例（参考用）
-│   ├── Me.md                # 模板：结构化个人信息（给 Agent/脚本用）
-│   ├── Me.example.md        # 示例（参考用）
-│   ├── timeline.md          # 模板：时间线与关键事件（可选）
-│   └── timeline.example.md  # 示例（参考用）
-│   ├── signals.md            # 模板：从对话/复盘抽取的“关于我”的信号（可选）
-│   └── signals.example.md    # 示例（参考用）
-├── appearance/             # 外观/形象（可选）
-├── skills/                 # 技能画像（可选）
-└── exports/                # 可发布的导出物（可选：简历/网站等）
-```
+## 当前模板保留的资产域
 
----
+- [`profile/`](./profile/)
+  - 公开画像、结构化 Me、时间线、values、signals
+- [`appearance/`](./appearance/)
+  - 外观 / 形象相关材料（可选）
+- [`skills/`](./skills/)
+  - 技能画像与证据化能力（可选）
+- [`exports/`](./exports/)
+  - 可发布导出物，例如简历、主页、作品集（可选）
 
-## Usage
+## 为什么模板只保留这几块
 
-1. **查看 `.example.md`** — 了解内容结构和写法
-2. **编辑对应的 `.md` 模板** — 填入你自己的内容（优先从 `profile/` 开始）
-3. **删除 `.example.md`（可选）** — 完成后可移除示例
+私有真源仓里的 `04_Assets/` 可能还包含：
 
----
+- finance
+- publication
+- repositories
+- writing
+- virtual-assets
 
-## What Goes Here
+但公开模板不需要默认把这些高私密或强个人化资产都带上。
 
-| File | Purpose |
-|------|---------|
-| `profile/README.md` | 公开版简历：Bio、Education、Experience、Publications |
-| `profile/values.md` | 核心价值观/原则（上游约束） |
-| `profile/Me.md` | 结构化个人信息（姓名/年龄/身高体重/教育/经历等，给 Agent/脚本用） |
-| `profile/timeline.md` | 人生时间线与关键事件（可选） |
-| `profile/signals.md` | 从对话/复盘抽取的 Me-Info 信号（可选，按时间追加） |
-| `appearance/` | 外观/形象相关（照片/描述/风格），按需维护 |
-| `skills/` | 技能画像（可分层：硬技能/软技能/方法论），按需维护 |
-| `exports/` | 面向发布的导出物（如简历 PDF、个人网站静态页等） |
+模板更适合先保留最通用的 4 类：
 
----
+1. `profile`：谁是你、你怎么介绍自己
+2. `appearance`：你的对外形象材料
+3. `skills`：你有哪些稳定能力与证据
+4. `exports`：哪些内容已经变成可分享产物
 
-## Tips
+## 使用顺序
 
-- **Assets 是存量** — 已确权的、稳定的内容
-- **转化公式**：`Resource + Action = Asset`
+1. 先看 `profile/*.example.md`，理解结构
+2. 再填写 `profile/*.md` 模板
+3. 需要对外投递或公开时，再进入 [`exports/`](./exports/)
+4. 需要补能力资产时，再维护 [`skills/README.md`](./skills/README.md)
+
+## 典型导流
+
+上游通常来自：
+
+- `01_Inbox/`
+- `03_Goal-Projects/`
+- `05_Resources/`
+- 对话、复盘、项目交付物
+
+常见进入资产层的条件：
+
+- 已经形成稳定事实
+- 已经成为长期可复用存量
+- 已经进入对外交付或正式成果状态

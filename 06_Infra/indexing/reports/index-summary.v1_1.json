@@ -1,0 +1,173 @@
+{
+  "version": "v1.1",
+  "profile": "v1_1",
+  "built_at": "2026-04-03T13:47:53.085458+00:00",
+  "scope": [
+    "00_Protocol",
+    "03_Goal-Projects",
+    "05_Resources/network",
+    "07_Principles",
+    "08_Operations"
+  ],
+  "files_scanned": 55,
+  "concepts": 5,
+  "evidence_total": 52,
+  "dropped_by_policy_total": 33,
+  "evidence_kind_counts": {
+    "index": 13,
+    "cognition": 6,
+    "other": 26,
+    "decision": 7
+  },
+  "policy": {
+    "max_evidence_per_concept": 12,
+    "kind_quota": {
+      "review": 4,
+      "decision": 4,
+      "cognition": 3,
+      "index": 1
+    }
+  },
+  "link_report": {
+    "version": "v1.1",
+    "link_report_level": "balanced",
+    "checked_local_links": 75,
+    "checked_code_paths": 208,
+    "markdown": {
+      "error": 0,
+      "note": 0,
+      "error_samples": [],
+      "note_samples": []
+    },
+    "code_paths": {
+      "error": 0,
+      "note": 29,
+      "error_samples": [],
+      "note_samples": [
+        [
+          "00_Protocol/PRIVACY.md",
+          "private/"
+        ],
+        [
+          "00_Protocol/PRIVACY.md",
+          "private/README.md"
+        ],
+        [
+          "00_Protocol/USAGE.md",
+          "cognition/"
+        ],
+        [
+          "00_Protocol/USAGE.md",
+          "decisions/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/.agents/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/cognition/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/decisions/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/04-review/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/timeline/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/plans/"
+        ],
+        [
+          "00_Protocol/schemas/indexing-contract.v1.md",
+          "/notes/"
+        ],
+        [
+          "00_Protocol/schemas/protocol-federation-map.v1.md",
+          "YYYY/MM/"
+        ],
+        [
+          "03_Goal-Projects/README.md",
+          "cognition/"
+        ],
+        [
+          "03_Goal-Projects/README.md",
+          "decisions/"
+        ],
+        [
+          "03_Goal-Projects/README.md",
+          "YYYY/MM/"
+        ],
+        [
+          "03_Goal-Projects/README.md",
+          "active/"
+        ],
+        [
+          "03_Goal-Projects/README.md",
+          "cognition/"
+        ],
+        [
+          "03_Goal-Projects/README.md",
+          "decisions/"
+        ],
+        [
+          "03_Goal-Projects/_TEMPLATE/PLAN.md",
+          "cognition/001-...md"
+        ],
+        [
+          "03_Goal-Projects/_TEMPLATE/PLAN.md",
+          "decisions/001-...md"
+        ],
+        [
+          "03_Goal-Projects/_docs/concepts.md",
+          "decisions/001-xxx.md"
+        ],
+        [
+          "03_Goal-Projects/_docs/concepts.md",
+          "decisions/002-xxx.md"
+        ],
+        [
+          "03_Goal-Projects/_docs/concepts.md",
+          "cognition/"
+        ],
+        [
+          "03_Goal-Projects/evergreen/README.md",
+          "YYYY/MM/"
+        ],
+        [
+          "03_Goal-Projects/evergreen/README.md",
+          "YYYY/MM/"
+        ],
+        [
+          "03_Goal-Projects/evergreen/README.md",
+          "YYYY/MM/"
+        ],
+        [
+          "07_Principles/003-reading-materials-as-resources.md",
+          "cognition/"
+        ],
+        [
+          "07_Principles/004-project-first-knowledge-accumulation.md",
+          "cognition/"
+        ],
+        [
+          "07_Principles/README.md",
+          "decisions/"
+        ]
+      ]
+    }
+  },
+  "args": {
+    "seeds": "06_Infra/indexing/concept-seeds.yaml",
+    "out_json": "06_Infra/indexing/repo-concept-index.v1.json",
+    "out_md": "06_Infra/indexing/repo-concept-index.v1.md",
+    "link_report": "06_Infra/indexing/reports/link-check.v1.md",
+    "summary_json": "06_Infra/indexing/reports/index-summary.v1_1.json"
+  }
+}

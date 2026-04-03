@@ -1,0 +1,4 @@
+interface:
+  display_name: "Master Schedule Sync"
+  short_description: "Push/pull Apple Calendar sync for MEMO schedule"
+  default_prompt: "Use $master-schedule-sync to run the master schedule Apple Calendar synchronization flow and summarize results."
